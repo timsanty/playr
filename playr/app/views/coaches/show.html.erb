@@ -1,0 +1,49 @@
+<h1>Your Information</h1><br>
+
+<%= link_to "Back to Dashboard", coaches_path(@coach) %>
+
+<div>
+	<div><h3>Name:</h3> <%= @coach.name %></div>
+	<div><h3>Title:</h3> <%= @coach.title %></div>
+	<div><h3>School:</h3> <%= @coach.school %></div>
+	<div><h3>Email:</h3> <%= @coach.email %></div>
+</div>
+
+
+<!-- button to move edit form to another page -->
+ <%#= button_to "Edit", action: "edit" %>
+ <!-- button -->
+
+<h1>Edit Here</h1>
+<div role="form" class="col-xs-12" id="edit-form">
+	<%= form_for(@coach) do |f| %>
+
+	<div class="form-group">
+	    <%= f.label :name %><br>
+	    <%= f.text_field :name %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :title %><br>
+	  <%= f.text_field :title %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :school %><br>
+	  <%= f.text_field :school %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :email %><br>
+	  <%= f.text_field :email %>
+	</div>
+
+	<!--         <div class="form-group">
+	  <%#= f.file_field :avatar %><br>
+	</div> -->
+
+	<%= f.submit %>
+
+	<% end %>
+</div>
+  <%= link_to('Logout', destroy_player_session_path, :method => :delete) %>  

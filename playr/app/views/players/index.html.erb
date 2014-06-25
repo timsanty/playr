@@ -1,0 +1,28 @@
+<a href="/coaches">Back to Dashboard</a><br>
+<%= link_to('Logout', destroy_player_session_path, :method => :delete) %>
+
+<div>	
+	<% @players.each do |player| %>
+	<h2>Athlete</h2>
+		Name: <%= player.name %><br>
+		Email: <%= player.email %><br>
+
+		<h3>Physical stats</h3>
+		Height: <%= player.height %><br>
+		Weight: <%= player.weight %><br>
+		Block Jump: <%= player.block_jump %><br>
+		Approach Jump: <%= player.approach_jump %><br>
+		Hand: <%= player.hand %><br>
+
+		<h3>Scholastic stats</h3>
+		GPA: <%= player.gpa %><br>
+		Graduation Year: <%= player.grad_year %><br>
+
+		<%= form_for @coachplayers do |f| %>
+			<%= f.hidden_field :player_id, :value => player.id %>
+			<%= f.hidden_field :name, :value => player.name %>
+			<%= f.hidden_field :email, :value => player.email %>
+			<%= f.submit "add" %>
+		<% end %>
+	<% end %>
+</div>

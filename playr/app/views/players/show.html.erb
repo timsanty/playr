@@ -1,0 +1,74 @@
+<h1>Player Info</h1>
+<%= @player.name %><br>
+<%= @player.email %><br>
+
+<h3>Physical stats</h3>
+<%= @player.height %><br>
+<%= @player.weight %> lbs<br>
+<%= @player.block_jump %><br>
+<%= @player.approach_jump %><br>
+<%= @player.hand %> handed<br>
+
+<h3>Scholastic stats</h3>
+<%= @player.gpa %> gpa<br>
+<%= @player.grad_year %><br>
+
+<h1>Edit Here</h1>
+<div role="form" class="col-xs-12" id="edit-form">
+	<%= form_for(@player) do |f| %>
+
+	<div class="form-group">
+	    <%= f.label :name %><br>
+	    <%= f.text_field :name %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :email %><br>
+	  <%= f.text_field :email %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :height %><br>
+	  <%= f.text_field :height %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :weight %><br>
+	  <%= f.text_field :weight %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :block_jump %><br>
+	  <%= f.text_field :block_jump %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :approach_jump %><br>
+	  <%= f.text_field :approach_jump %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :hand %><br>
+	  <%= f.text_field :hand %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :gpa %><br>
+	  <%= f.text_field :gpa %>
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :grad_year %><br>
+	  <%= f.text_field :grad_year %>
+	</div>
+
+	<!--         <div class="form-group">
+	  <%#= f.file_field :avatar %><br>
+	</div> -->
+
+	<%= f.submit %>
+	<% end %>
+</div>
+
+
+  <%= link_to('Logout', destroy_player_session_path, :method => :delete) %>        

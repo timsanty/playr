@@ -1,0 +1,14 @@
+<div>
+<h1>Welcome to Playr <%= @coach.name %>!</h1>
+<h4>We make athlete review easy! </h4>
+		<a href="/players">Players!</a><br>
+
+		<%= link_to "Profile", coach_path(@coach) %><br>
+		<%= link_to('Logout', destroy_player_session_path, :method => :delete) %> 
+</div>
+
+
+<%#= @coach.name %>
+<%#= @coach.title %>
+<%#= @coach.school %>
+<%#= @coach.email %>

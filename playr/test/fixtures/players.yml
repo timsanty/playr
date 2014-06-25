@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  height: MyString
+  weight: MyString
+  block_jump: MyString
+  approach_jump: MyString
+  gpa: MyString
+  hand: MyString
+  position: MyString
+  grad_year: MyString
+
+two:
+  height: MyString
+  weight: MyString
+  block_jump: MyString
+  approach_jump: MyString
+  gpa: MyString
+  hand: MyString
+  position: MyString
+  grad_year: MyString
