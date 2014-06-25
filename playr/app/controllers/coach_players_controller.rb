@@ -12,11 +12,5 @@ class CoachPlayersController < ApplicationController
 
 		#@coachplayer = CoachPlayer.find(:coach_id)
 	end
-
-
-  # private
-	 #  def coach_player_params
-	 #    params.require(:coachplayer).permit(:coach_id, :player_id)
-	 #  end
 end
 
