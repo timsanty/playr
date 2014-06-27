@@ -1,6 +1,8 @@
+<span>
 <h1>Player Info</h1>
 <%= @player.name %><br>
 <%= @player.email %><br>
+<%= image_tag @player.avatar.url(:square) %>
 
 <h3>Physical stats</h3>
 <%= @player.height %><br>
@@ -62,9 +64,10 @@
 	  <%= f.text_field :grad_year %>
 	</div>
 
-	<!--         <div class="form-group">
-	  <%#= f.file_field :avatar %><br>
-	</div> -->
+	<div class="field">
+  		<%= f.label :avatar %><br />
+  		<%= f.file_field :avatar %>
+	</div>
 
 	<%= f.submit %>
 	<% end %>
@@ -72,3 +75,4 @@
 
 
   <%= link_to('Logout', destroy_player_session_path, :method => :delete) %>        
+</span>
